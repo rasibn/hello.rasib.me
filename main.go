@@ -9,9 +9,9 @@ import (
 // helloHandler handles HTTP requests to the "/hello" endpoint
 func helloHandler(w http.ResponseWriter, r *http.Request) {
 	// Set the Content-Type header to text/plain
-	w.Header().Set("Content-Type", "text/plain")
+	w.Header().Set("Content-Type", "text/html")
 	// Write "Hello, World!" to the response
-	fmt.Fprintln(w, "Hello, World!")
+	fmt.Fprintln(w, "<h1>Hello, World!</h1>")
 }
 
 func main() {
@@ -22,6 +22,5 @@ func main() {
 	mux.HandleFunc("GET /", helloHandler)
 
 	// Start the HTTP server on port 8080
-	log.Fatal(http.ListenAndServe(":8080", mux))
+	log.Fatal(http.ListenAndServe(":8089", mux))
 }
-
