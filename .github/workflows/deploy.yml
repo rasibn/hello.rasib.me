@@ -1,0 +1,31 @@
+name: Deploy website on the server
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup SSH agent
+        uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.SSH_PRIVATE_KEY }}
+
+      - name: Deploy to Server
+        run: |
+          ssh -t -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
+            cd hello.rasib.me
+            export GIN_MODE=release
+            git fetch origin main
+            git reset --hard origin/main
+            git clean -fd
+            sudo systemctl stop hello.rasib.me-go.service
+            go mod tidy
+            go build -ldflags="-s -w" -o build/Release
+            sudo systemctl start hello.rasib.me-go.service
+          EOF
