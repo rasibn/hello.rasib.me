@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    {{ template "head.html" .}}
+  </head>
+  <body class="flex justify-center">
+    <div class="prose prose-slate px-4 py-10">
+      <header>
+        <h1>hello.rasib.me</h1>
+      </header>
+      <main>
+        <article>
+          <header>
+            <h2>About me</h2>
+          </header>
+          <p>In three words: hacker, programmer, (neo)vimmer.</p>
+          <p>I like tinkering with new tools and finding ways to make my programming job more fun.</p>
+          <p>I am a fan of a lot of the terminal lifestyle tools, but some that I really like are:</p>
+          <ul>
+            <li><code>zoxide</code></li>
+            <li><code>LazyVim</code></li>
+            <li><code>Oil.nvim</code></li>
+            <li>
+              and some custom bash scripts I wrote that use <code>fzf</code> to make life simple:
+              <ul>
+                <li>
+                  <a href="https://github.com/rasibn/dotfiles/blob/main/components/scripts/nvim-fzf-opener-preview.sh">
+                    nvim-fzf-opener.sh
+                  </a>
+                </li>
+                <li>
+                  <a href="https://github.com/rasibn/dotfiles/blob/main/components/scripts/tmux-sessionizer.sh">
+                    tmux-sessionizer.sh
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <p>
+            You can find more tools and scripts I use in my
+            <code>dotfiles</code> repo at
+            <a href="https://github.com/rasibn/dotfiles">https://github.com/rasibn/dotfiles</a>
+          </p>
+        </article>
+        <article>
+          <header>
+            <h2>How to set up MacOS to be more <code>i3wm</code>-like</h2>
+          </header>
+          <p>Work in progress</p>
+        </article>
+        <section>
+          <header>
+            <h2>Tools used to make this website</h2>
+          </header>
+          <p>
+            Following the highly inspirational
+            <a href="https://grugbrain.dev">grugbrain</a> mindset, my stack ended up being:
+          </p>
+          <ul>
+            <li><code>go</code> templates</li>
+            <li><code>tailwind</code> with the <code>tailwind-typography</code> plugin</li>
+          </ul>
+          <h3>Footnote</h3>
+          <p>
+            Planning on adding
+            <code><a href="https://htmx.org">htmx</a></code> and
+            <code><a href="https://github.com/gnat/surreal">surreal.js</a></code>
+            to some aspects just for fun, but I'm 99% sure they are not needed.
+          </p>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>
