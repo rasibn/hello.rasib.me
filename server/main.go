@@ -14,5 +14,5 @@ func main() {
 	r.GET("/", root)
 	r.POST("/api/posts/:id", getPost)
 
-	r.Run("localhost:8089")
+	r.Run("0.0.0.0:8089")
 }

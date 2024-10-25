@@ -1,0 +1,10 @@
+services:
+  web:
+    build: .
+    ports:
+      - "8089:8089"
+    volumes:
+      - ./frontend/static:/app/frontend/static
+      - ./frontend/templates:/app/frontend/templates
+    environment:
+      - GIN_MODE=release
