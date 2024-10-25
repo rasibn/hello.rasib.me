@@ -8,3 +8,4 @@ services:
       - ./frontend/templates:/app/frontend/templates
     environment:
       - GIN_MODE=release
+    restart: always
