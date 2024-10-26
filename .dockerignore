@@ -37,8 +37,6 @@ docker-compose.yaml
 
 # Ignore documentation or static content that's not needed in the image
 docs/
-frontend/static/
-frontend/templates/
 
 # Ignore any build cache or artifacts
 build/
