@@ -20,12 +20,8 @@ jobs:
         run: |
           ssh -t -o StrictHostKeyChecking=no ${{ secrets.SSH_USER }}@${{ secrets.SERVER_IP }} << 'EOF'
             cd hello.rasib.me
-            export GIN_MODE=release
             git fetch origin main
             git reset --hard origin/main
             git clean -fd
-            sudo systemctl stop hello.rasib.me-go.service
-            go mod tidy
-            go build -ldflags="-s -w" -o build/Release
-            sudo systemctl start hello.rasib.me-go.service
+            sudo docker compose up --build -d
           EOF
