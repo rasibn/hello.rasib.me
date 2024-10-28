@@ -1,12 +1,8 @@
-# Ignore the node_modules directory
-node_modules
-frontend/node_modules
+**/node_modules
 
-# Ignore logs and temporary files
 *.log
 *.tmp
 
-# Ignore Go build artifacts
 *.out
 *.exe
 *.test
@@ -14,30 +10,21 @@ frontend/node_modules
 *.a
 *.so
 
-# Ignore the Dockerfile itself and docker-compose.yaml file
 Dockerfile
 docker-compose.yaml
 
-# Ignore git-specific files
 .git
 .gitignore
 
-# Ignore the Go workspace files
 *.swp
 *.swo
 
-# Ignore environment and secret files
 .env
 .env.*
 .envrc
 
-# Ignore local config and dev files
 .idea
 .vscode
 
-# Ignore documentation or static content that's not needed in the image
-docs/
-
-# Ignore any build cache or artifacts
 build/
 dist/
