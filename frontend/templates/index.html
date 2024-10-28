@@ -4,69 +4,131 @@
     {{ template "head.html" .}}
   </head>
   <body>
-      <header>
-        <h1>hello.rasib.me</h1>
-      </header>
-      <main>
-        <article>
-          <header>
-            <h2>About me</h2>
-          </header>
-          <p>In three words: hacker, programmer, (neo)vimmer.</p>
-          <p>I like tinkering with new tools and finding ways to make my programming job more fun.</p>
-          <p>I am a fan of a lot of the terminal lifestyle tools, but some that I really like are:</p>
-          <ul>
-            <li><code>zoxide</code></li>
-            <li><code>LazyVim</code></li>
-            <li><code>Oil.nvim</code></li>
-            <li>
-              and some custom bash scripts I wrote that use <code>fzf</code> to make life simple:
-              <ul>
-                <li>
-                  <a href="https://github.com/rasibn/dotfiles/blob/main/components/scripts/nvim-fzf-opener-preview.sh">
-                    nvim-fzf-opener.sh
-                  </a>
-                </li>
-                <li>
-                  <a href="https://github.com/rasibn/dotfiles/blob/main/components/scripts/tmux-sessionizer.sh">
-                    tmux-sessionizer.sh
-                  </a>
-                </li>
-              </ul>
-            </li>
-          </ul>
-          <p>
-            You can find more tools and scripts I use in my
-            <code>dotfiles</code> repo at
-            <a href="https://github.com/rasibn/dotfiles">https://github.com/rasibn/dotfiles</a>
-          </p>
-        </article>
-        <!-- <article> -->
-        <!--   <header> -->
-        <!--     <h2>How to set up MacOS to be more <code>i3wm</code>-like</h2> -->
-        <!--   </header> -->
-        <!--   <p>Work in progress</p> -->
-        <!-- </article> -->
-        <article>
-          <header>
-            <h2>Tools used to make this website</h2>
-          </header>
-          <p>
-            Following the highly inspirational
-            <a href="https://grugbrain.dev">grugbrain</a> mindset, my stack ended up being:
-          </p>
-          <ul>
-            <li><code>go</code> templates</li>
-            <li><code>pico css</li>
-          </ul>
-          <!-- <h3>Footnote</h3> -->
-          <!-- <p> -->
-          <!--   Planning on adding -->
-          <!--   <code><a href="https://htmx.org">htmx</a></code> and -->
-          <!--   <code><a href="https://github.com/gnat/surreal">surreal.js</a></code> -->
-          <!--   to some aspects just for fun, but I'm 99% sure they are not needed. -->
-          <!-- </p> -->
-        </article>
-      </main>
+    <main>
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#coding">Job & Coding</a></li>
+          <li><a href="#anime">Favorite Anime</a></li>
+          <li><a href="#books">Favorite Books</a></li>
+          <!-- <li><a href="#songs">Favorite Songs</a></li> -->
+          <li><a href="#goals">Goals</a></li>
+        </ul>
+      </nav>
+      <article id="about">
+        <header>
+          <h2><code>About::Summary</code></h2>
+        </header>
+        <p><b>TL;DR:</b> I like anime, coding, learning Japanese, and walking outside (sometimes).</p>
+      </article>
+      <article id="coding">
+        <header>
+          <h2><code>Job::Coding</code></h2>
+        </header>
+        <p>
+          I have a full-time programming job, so I spend a lot of time tinkering with new tools and finding ways to make
+          it more easy and fun.
+        </p>
+        <p>I use a lot of tools, but a few that make my life a lot better are:</p>
+        <ul>
+          <li>
+            <code>nvim</code> for editing and file manager (<code>oil.nvim</code>), and <code>tmux</code> for terminal
+            tabs
+          </li>
+          <li><code>NixOS</code> because it just works (?)</li>
+          <li>
+            And some custom bash scripts I wrote that might be cool to check out:
+            <ul>
+              <li>
+                <a
+                  href="https://github.com/rasibn/dotfiles/blob/main/shared/scripts/nvim-fzf.sh"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  nvim-fzf-opener.sh
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://github.com/rasibn/dotfiles/blob/main/shared/scripts/tmux-session-fzf.sh"
+                  target="_blank"
+                  rel="noopener"
+                >
+                  tmux-sessionizer.sh
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <p>
+          You can find more tools in my <code>dotfiles</code> repo at
+          <a href="https://github.com/rasibn/dotfiles" target="_blank" rel="noopener"
+            >https://github.com/rasibn/dotfiles</a
+          >.
+        </p>
+      </article>
+
+      <article id="anime">
+        <header>
+          <h2><code>Favorites::Anime</code></h2>
+        </header>
+        <p>Some that I really like (in no particular order) are:</p>
+        <ul>
+          <li>Bocchi the Rock</li>
+          <li>Made in Abyss</li>
+          <li>One Piece</li>
+          <li>Gurren Lagann</li>
+          <li>Major</li>
+          <li>Baby Steps</li>
+          <li>Monogatari Series</li>
+          <li>Hunter x Hunter</li>
+          <li>The Dangers in My Heart</li>
+          <li>Vinland Saga</li>
+          <li>March Comes in Like a Lion</li>
+          <li>Detective Conan</li>
+          <li>The Eminence in Shadow</li>
+          <!-- <li>Yuru Yuri</li> -->
+        </ul>
+      </article>
+      <article id="books">
+        <header>
+          <h2><code>Favorites::Books</code></h2>
+        </header>
+        <p>Here are some of my favorite books:</p>
+        <ul>
+          <li>Name of the Wind</li>
+          <li>Red Sister</li>
+          <li>Stormlight: Words of Radiance</li>
+          <li>Mistborn: Hero of Ages, Final Empire</li>
+          <!-- <li>Akuyaku Reijo Ni Koi Wo Shite</li> -->
+          <!-- <li>Moshoku Tensei</li> -->
+        </ul>
+      </article>
+      <!-- <article id="songs"> -->
+      <!--   <header> -->
+      <!--     <h2><code>Favorites::Songs</code></h2> -->
+      <!--   </header> -->
+      <!--   <p>Favorite songs:</p> -->
+      <!--   <ul> -->
+      <!--     <li>そばにいて。 / 『ユイカ』</li> -->
+      <!--   </ul> -->
+      <!-- </article> -->
+      <article id="goals">
+        <header>
+          <h2><code>Pub::Goals</code></h2>
+        </header>
+        <ul>
+          <li>
+            Working on a cool little side project that is a web-based reader for language learners (more on this soon™)
+          </li>
+        </ul>
+      </article>
+    </main>
+    <footer>
+      <p>
+        This website is kindly inspired by
+        <a href="https://grugbrain.dev" target="_blank" rel="noopener">https://grugbrain.dev</a>.
+      </p>
+    </footer>
   </body>
 </html>
