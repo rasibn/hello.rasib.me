@@ -198,7 +198,7 @@ func booksSection() templ.Component {
 			templ_7745c5c3_Var7 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 10, "<p>I also like words on paper. Some of my favorite books are:</p><ul><li>Name of the Wind</li><li>Red Sister</li><li>Stormlight: Words of Radiance</li><li>Mistborn: Hero of Ages, Final Empire</li><li>Akuyaku Reijo Ni Koi Wo Shite (Japanese)</li><!-- <li>Moshoku Tensei</li> --></ul>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 10, "<p>I also like words on paper. Some of my favorite books are:</p><ul><li>Name of the Wind</li><li>Red Sister</li><li>Stormlight: Words of Radiance</li><li>Mistborn: Hero of Ages, Final Empire</li></ul>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

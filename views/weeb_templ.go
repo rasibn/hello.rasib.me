@@ -43,7 +43,7 @@ func Weeb() templ.Component {
 				}()
 			}
 			ctx = templ.InitializeContext(ctx)
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<article><header><h1>Weeb Zone</h1></header>I am not a weeb.</article>")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<article><header><h1>Weeb Zone</h1></header>I am not a weeb.</article><article id=\"anime\"><header><h2>Anime</h2></header>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -51,11 +51,23 @@ func Weeb() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, " ")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "</article><article id=\"other\">")
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = otherThings().Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "</article><article id=\"songs\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
 			templ_7745c5c3_Err = songSection().Render(ctx, templ_7745c5c3_Buffer)
+			if templ_7745c5c3_Err != nil {
+				return templ_7745c5c3_Err
+			}
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "</article>")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -90,7 +102,36 @@ func animeSection() templ.Component {
 			templ_7745c5c3_Var3 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "<article id=\"anime\"><header><h2>Anime</h2></header><p>Some anime that I really like (in no particular order) are:</p><ul><li>Bocchi the Rock</li><li>Made in Abyss</li><li>One Piece</li><li>Gurren Lagann</li><li>Major</li><li>Baby Steps</li><li>Monogatari Series</li><li>Hunter x Hunter</li><li>The Dangers in My Heart</li><li>Vinland Saga</li><li>March Comes in Like a Lion</li><li>Detective Conan</li><li>The Eminence in Shadow</li><li>Yuru Yuri</li></ul></article>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "<p>Some anime that I liked (in no particular order) are:</p><ul><li>Bocchi the Rock</li><li>Made in Abyss</li><li>One Piece</li><li>Gurren Lagann</li><li>Major</li><li>Baby Steps</li><li>Monogatari Series</li><li>Hunter x Hunter</li><li>The Dangers in My Heart</li><li>Vinland Saga</li><li>March Comes in Like a Lion</li><li>Detective Conan</li><li>The Eminence in Shadow</li><li>Yuru Yuri</li></ul>")
+		if templ_7745c5c3_Err != nil {
+			return templ_7745c5c3_Err
+		}
+		return nil
+	})
+}
+
+func otherThings() templ.Component {
+	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
+		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
+		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
+			return templ_7745c5c3_CtxErr
+		}
+		templ_7745c5c3_Buffer, templ_7745c5c3_IsBuffer := templruntime.GetBuffer(templ_7745c5c3_W)
+		if !templ_7745c5c3_IsBuffer {
+			defer func() {
+				templ_7745c5c3_BufErr := templruntime.ReleaseBuffer(templ_7745c5c3_Buffer)
+				if templ_7745c5c3_Err == nil {
+					templ_7745c5c3_Err = templ_7745c5c3_BufErr
+				}
+			}()
+		}
+		ctx = templ.InitializeContext(ctx)
+		templ_7745c5c3_Var4 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var4 == nil {
+			templ_7745c5c3_Var4 = templ.NopComponent
+		}
+		ctx = templ.ClearChildren(ctx)
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 6, "<p>Some weeb-adjacent things i really really liked:</p><ul><li>Akuyaku Reijo Ni Koi Wo Shite (web novel)</li><li>honzuki no gekokujō (web novel)</li><li>Yagate Kimi ni Naru (manga)</li><!-- <li>Moshoku Tensei</li> --></ul>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -114,12 +155,12 @@ func songSection() templ.Component {
 			}()
 		}
 		ctx = templ.InitializeContext(ctx)
-		templ_7745c5c3_Var4 := templ.GetChildren(ctx)
-		if templ_7745c5c3_Var4 == nil {
-			templ_7745c5c3_Var4 = templ.NopComponent
+		templ_7745c5c3_Var5 := templ.GetChildren(ctx)
+		if templ_7745c5c3_Var5 == nil {
+			templ_7745c5c3_Var5 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "<article id=\"songs\"><header><h2>Songs</h2></header><p>Favorite song(s):</p><ul><li><a href=\"https://www.youtube.com/watch?v=AG1o7NN2Dwo&list=RDAG1o7NN2Dwo&start_radio=1\">そばにいて。 / 『ユイカ』</a></li><li><a href=\"https://www.youtube.com/watch?v=TY_2NuORgP4&list=RDTY_2NuORgP4&start_radio=1\">ラストティーン / 『ユイカ』</a></li></ul><hr>Yes. I am a fan.</article>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 7, "<p>Favorite weeb song(s):</p><ul><li><a href=\"https://www.youtube.com/watch?v=AG1o7NN2Dwo&list=RDAG1o7NN2Dwo&start_radio=1\">そばにいて。 / 『ユイカ』</a></li><li><a href=\"https://www.youtube.com/watch?v=TY_2NuORgP4&list=RDTY_2NuORgP4&start_radio=1\">ラストティーン / 『ユイカ』</a></li></ul><hr>Yes. I am a fan.")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

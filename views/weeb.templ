@@ -10,47 +10,59 @@ templ Weeb() {
 			</header>
 			I am not a weeb.
 		</article>
-		@animeSection()
-		@songSection()
+		<article id="anime">
+			<header>
+				<h2>Anime</h2>
+			</header>
+			@animeSection()
+		</article>
+		<article id="other">
+			@otherThings()
+		</article>
+		<article id="songs">
+			@songSection()
+		</article>
 	}
 }
 
 templ animeSection() {
-	<article id="anime">
-		<header>
-			<h2>Anime</h2>
-		</header>
-		<p>Some anime that I really like (in no particular order) are:</p>
-		<ul>
-			<li>Bocchi the Rock</li>
-			<li>Made in Abyss</li>
-			<li>One Piece</li>
-			<li>Gurren Lagann</li>
-			<li>Major</li>
-			<li>Baby Steps</li>
-			<li>Monogatari Series</li>
-			<li>Hunter x Hunter</li>
-			<li>The Dangers in My Heart</li>
-			<li>Vinland Saga</li>
-			<li>March Comes in Like a Lion</li>
-			<li>Detective Conan</li>
-			<li>The Eminence in Shadow</li>
-			<li>Yuru Yuri</li>
-		</ul>
-	</article>
+	<p>Some anime that I liked (in no particular order) are:</p>
+	<ul>
+		<li>Bocchi the Rock</li>
+		<li>Made in Abyss</li>
+		<li>One Piece</li>
+		<li>Gurren Lagann</li>
+		<li>Major</li>
+		<li>Baby Steps</li>
+		<li>Monogatari Series</li>
+		<li>Hunter x Hunter</li>
+		<li>The Dangers in My Heart</li>
+		<li>Vinland Saga</li>
+		<li>March Comes in Like a Lion</li>
+		<li>Detective Conan</li>
+		<li>The Eminence in Shadow</li>
+		<li>Yuru Yuri</li>
+	</ul>
+}
+
+templ otherThings() {
+	<p>Some weeb-adjacent things i really really liked:</p>
+	<ul>
+		<li>Akuyaku Reijo Ni Koi Wo Shite (web novel)</li>
+		<li>honzuki no gekokujō (web novel)</li>
+		<li>
+			Yagate Kimi ni Naru (manga)
+		</li>
+		<!-- <li>Moshoku Tensei</li> -->
+	</ul>
 }
 
 templ songSection() {
-	<article id="songs">
-		<header>
-			<h2>Songs</h2>
-		</header>
-		<p>Favorite song(s):</p>
-		<ul>
-			<li><a href="https://www.youtube.com/watch?v=AG1o7NN2Dwo&list=RDAG1o7NN2Dwo&start_radio=1">そばにいて。 / 『ユイカ』</a></li>
-			<li><a href="https://www.youtube.com/watch?v=TY_2NuORgP4&list=RDTY_2NuORgP4&start_radio=1">ラストティーン / 『ユイカ』</a></li>
-		</ul>
-		<hr/>
-		Yes. I am a fan.
-	</article>
+	<p>Favorite weeb song(s):</p>
+	<ul>
+		<li><a href="https://www.youtube.com/watch?v=AG1o7NN2Dwo&list=RDAG1o7NN2Dwo&start_radio=1">そばにいて。 / 『ユイカ』</a></li>
+		<li><a href="https://www.youtube.com/watch?v=TY_2NuORgP4&list=RDTY_2NuORgP4&start_radio=1">ラストティーン / 『ユイカ』</a></li>
+	</ul>
+	<hr/>
+	Yes. I am a fan.
 }
