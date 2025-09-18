@@ -16,9 +16,9 @@ templ Layout(name string) {
         flex-grow: 1;
       }
     </style>
-		<body>
+		<body class="container">
+      @header()
 			<main>
-				@header()
 				{ children... }
 			</main>
 			<footer>
@@ -29,14 +29,15 @@ templ Layout(name string) {
 }
 
 templ header() {
-	<nav>
-		<ul>
-			<li><a href="/">about</a></li>
-			<li>
-				<a href="/weeb" onclick="return confirm('Do you really want to enter the weeb zone?')"> weeb only </a>
-			</li>
-		</ul>
-	</nav>
+  <header></header>
+    <nav>
+      <ul>
+        <li><a href="/">about</a></li>
+        <li>
+          <a href="/weeb" onclick="return confirm('Do you really want to enter the weeb zone?')"> weeb only </a>
+        </li>
+      </ul>
+    </nav>
 }
 
 
@@ -51,10 +52,10 @@ templ meta(title string) {
 		<link rel="icon" href="/static/favicon_io/favicon.ico" type="image/x-icon"/>
 		<meta name="viewport" content="width=device-width, initial-scale=1"/>
 		<meta name="color-scheme" content="light dark"/>
-		<link
-			rel="stylesheet"
-			href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.classless.min.css"
-		/>
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css"
+>
 		<title>{ title }</title>
 	</head>
 }
