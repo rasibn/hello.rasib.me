@@ -131,7 +131,7 @@ func otherThings() templ.Component {
 			templ_7745c5c3_Var4 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 6, "<p>Some weeb-adjacent things i really really liked:</p><ul><li>Akuyaku Reijo Ni Koi Wo Shite (web novel)</li><li>honzuki no gekokujō (web novel)</li><li>Yagate Kimi ni Naru (manga)</li><!-- <li>Moshoku Tensei</li> --></ul>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 6, "<p>Some weeb-adjacent things i really really liked:</p><ul><li>Akuyaku Reijo Ni Koi Wo Shite (web novel)</li><li>honzuki no gekokujō (web novel)</li><li>Yagate Kimi ni Naru (manga)</li><li>Kaguya Sama (manga only)</li><li>Mayonaka Hāto (manga) (don't know the ending yet)</li><!-- <li>Moshoku Tensei</li> --></ul>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
