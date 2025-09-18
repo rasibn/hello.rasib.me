@@ -55,7 +55,7 @@ func Hello() templ.Component {
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
-			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "</article><article>My favourite tech article is probably <a href=\"https://htmx.org/essays/locality-of-behaviour/\">https://htmx.org/essays/locality-of-behaviour/</a></article><article id=\"books\">")
+			templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 2, "</article><article>My favourite tech article is probably <a href=\"https://htmx.org/essays/locality-of-behaviour/\">htmx.org/essays/locality-of-behaviour/</a> by <a href=\"https://grugbrain.dev/\">the greatest smol brain dev</a>.<hr><p>Really made me the engineer I am today!</p></article><article id=\"books\">")
 			if templ_7745c5c3_Err != nil {
 				return templ_7745c5c3_Err
 			}
@@ -145,7 +145,7 @@ func techSection() templ.Component {
 			var templ_7745c5c3_Var5 templ.SafeURL
 			templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinURLErrs(val.url)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/home.templ`, Line: 63, Col: 21}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/home.templ`, Line: 66, Col: 21}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 			if templ_7745c5c3_Err != nil {
@@ -158,7 +158,7 @@ func techSection() templ.Component {
 			var templ_7745c5c3_Var6 string
 			templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(val.name)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/home.templ`, Line: 67, Col: 17}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/home.templ`, Line: 70, Col: 17}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 			if templ_7745c5c3_Err != nil {
@@ -198,7 +198,7 @@ func booksSection() templ.Component {
 			templ_7745c5c3_Var7 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 10, "<p>Some of my favorite books are:</p><ul><li>Name of the Wind</li><li>Red Sister</li><li>Stormlight: Words of Radiance</li><li>Mistborn: Hero of Ages, Final Empire</li><li>Akuyaku Reijo Ni Koi Wo Shite (Japanese)</li><!-- <li>Moshoku Tensei</li> --></ul>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 10, "<p>I also like words on paper. Some of my favorite books are:</p><ul><li>Name of the Wind</li><li>Red Sister</li><li>Stormlight: Words of Radiance</li><li>Mistborn: Hero of Ages, Final Empire</li><li>Akuyaku Reijo Ni Koi Wo Shite (Japanese)</li><!-- <li>Moshoku Tensei</li> --></ul>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

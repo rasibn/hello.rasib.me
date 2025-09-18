@@ -69,7 +69,7 @@ func Weeb() templ.Component {
 	})
 }
 
-func songSection() templ.Component {
+func animeSection() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -90,7 +90,7 @@ func songSection() templ.Component {
 			templ_7745c5c3_Var3 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "<article id=\"songs\"><header><h2>Songs</h2></header><p>Favorite song(s):</p><ul><li><a href=\"https://www.youtube.com/watch?v=AG1o7NN2Dwo&list=RDAG1o7NN2Dwo&start_radio=1\">そばにいて。 / 『ユイカ』</a></li></ul></article>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 3, "<article id=\"anime\"><header><h2>Anime</h2></header><p>Some anime that I really like (in no particular order) are:</p><ul><li>Bocchi the Rock</li><li>Made in Abyss</li><li>One Piece</li><li>Gurren Lagann</li><li>Major</li><li>Baby Steps</li><li>Monogatari Series</li><li>Hunter x Hunter</li><li>The Dangers in My Heart</li><li>Vinland Saga</li><li>March Comes in Like a Lion</li><li>Detective Conan</li><li>The Eminence in Shadow</li><li>Yuru Yuri</li></ul></article>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -98,7 +98,7 @@ func songSection() templ.Component {
 	})
 }
 
-func animeSection() templ.Component {
+func songSection() templ.Component {
 	return templruntime.GeneratedTemplate(func(templ_7745c5c3_Input templruntime.GeneratedComponentInput) (templ_7745c5c3_Err error) {
 		templ_7745c5c3_W, ctx := templ_7745c5c3_Input.Writer, templ_7745c5c3_Input.Context
 		if templ_7745c5c3_CtxErr := ctx.Err(); templ_7745c5c3_CtxErr != nil {
@@ -119,7 +119,7 @@ func animeSection() templ.Component {
 			templ_7745c5c3_Var4 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "<article id=\"anime\"><header><h2>Anime</h2></header><p>Some anime that I really like (in no particular order) are:</p><ul><li>Bocchi the Rock</li><li>Made in Abyss</li><li>One Piece</li><li>Gurren Lagann</li><li>Major</li><li>Baby Steps</li><li>Monogatari Series</li><li>Hunter x Hunter</li><li>The Dangers in My Heart</li><li>Vinland Saga</li><li>March Comes in Like a Lion</li><li>Detective Conan</li><li>The Eminence in Shadow</li><li>Yuru Yuri</li></ul></article>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 4, "<article id=\"songs\"><header><h2>Songs</h2></header><p>Favorite song(s):</p><ul><li><a href=\"https://www.youtube.com/watch?v=AG1o7NN2Dwo&list=RDAG1o7NN2Dwo&start_radio=1\">そばにいて。 / 『ユイカ』</a></li><li><a href=\"https://www.youtube.com/watch?v=TY_2NuORgP4&list=RDTY_2NuORgP4&start_radio=1\">ラストティーン / 『ユイカ』</a></li></ul><hr>Yes. I am a fan.</article>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
