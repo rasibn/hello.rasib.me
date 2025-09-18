@@ -6,8 +6,10 @@ import (
 	"log"
 	"net/http"
 	"path/filepath"
+	"strings"
 
 	"github.com/rasibn/hello.rasib.me/views"
+	"github.com/rasibn/hello.rasib.me/views/blog"
 )
 
 func main() {
@@ -15,6 +17,8 @@ func main() {
 	http.HandleFunc("/favicon.ico", icon)
 	http.HandleFunc("/", root)
 	http.HandleFunc("/weeb", weeb)
+	http.HandleFunc("/blog", blogList)
+	http.HandleFunc("/blog/", blogPost)
 
 	url := "0.0.0.0:8089"
 	fmt.Println("Server is running on ", url)
@@ -36,4 +40,24 @@ func root(w http.ResponseWriter, r *http.Request) {
 func weeb(w http.ResponseWriter, r *http.Request) {
 	template := views.Weeb()
 	_ = template.Render(context.Background(), w)
+}
+
+func blogList(w http.ResponseWriter, r *http.Request) {
+	template := blog.BlogList(Posts)
+	_ = template.Render(context.Background(), w)
+}
+
+func blogPost(w http.ResponseWriter, r *http.Request) {
+	path := strings.TrimPrefix(r.URL.Path, "/blog/")
+	id := strings.TrimSuffix(path, "/")
+
+	for _, post := range Posts {
+		if post.ID == id {
+			template := blog.BlogWrapper(post)
+			_ = template.Render(context.Background(), w)
+			return
+		}
+	}
+
+	http.NotFound(w, r)
 }

@@ -4,24 +4,22 @@ import "github.com/rasibn/hello.rasib.me/views/layout"
 
 templ Weeb() {
 	@layout.Layout("weeb only") {
-		<article>
-			<header>
-				<h1>Weeb Zone</h1>
-			</header>
-			I am not a weeb.
-		</article>
-		<article id="anime">
-			<header>
-				<h2>Anime</h2>
-			</header>
+		<section id="intro">
+			<h1>Weeb Zone</h1>
+			<p>I am not a weeb.</p>
+		</section>
+		<section id="anime">
+			<h2>Anime</h2>
 			@animeSection()
-		</article>
-		<article id="other">
+		</section>
+		<section id="other">
+			<h2>Other Weeb Things</h2>
 			@otherThings()
-		</article>
-		<article id="songs">
+		</section>
+		<section id="songs">
+			<h2>Favorite Songs</h2>
 			@songSection()
-		</article>
+		</section>
 	}
 }
 

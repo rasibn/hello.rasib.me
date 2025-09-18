@@ -1,0 +1,35 @@
+package blog
+
+templ Blog2Content() {
+	<section>
+		<h2>Go as a Scripting Language</h2>
+		<p>
+			Most people think of Python or Bash when they think "scripting language," but
+			I've been using Go for all my scripts lately. Here's why it works so well.
+		</p>
+		<p>
+			The compilation step actually makes deployment easier - no dependency management,
+			no "works on my machine" issues. Just build once, run anywhere.
+		</p>
+	</section>
+	<section>
+		<h2>My CLI Tools</h2>
+		<p>I've built a few tools that I use daily:</p>
+		<ul>
+			<li><code>vimi</code> - fuzzy finder for files in my home directory</li>
+			<li><code>proji</code> - fuzzy finder for project folders</li>
+		</ul>
+		<p>
+			Both use the same pattern: read directory contents, present fuzzy search interface,
+			output the selected path. Simple but incredibly useful.
+		</p>
+	</section>
+	<section>
+		<h2>Lessons Learned</h2>
+		<p>
+			Keep it simple. The best tools do one thing well. Don't over-engineer when
+			50 lines of Go will solve your problem perfectly.
+		</p>
+	</section>
+}
+

@@ -28,6 +28,10 @@ templ styles() {
       @media (min-width: 1280px) {
         .container { max-width: 940px; }
       }
+
+      section, aside {
+        margin-bottom: 3rem;
+      }
     </style>
 }
 
@@ -50,15 +54,17 @@ templ Layout(name string) {
 }
 
 templ header() {
-  <header></header>
+  <header>
     <nav>
       <ul>
         <li><a href="/">about</a></li>
+        <li><a href="/blog">blog</a></li>
         <li>
           <a href="/weeb" onclick="return confirm('Do you really want to enter the weeb zone?')"> weeb only </a>
         </li>
       </ul>
     </nav>
+  </header>
 }
 
 

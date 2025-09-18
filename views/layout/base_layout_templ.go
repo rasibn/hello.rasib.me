@@ -29,7 +29,7 @@ func styles() templ.Component {
 			templ_7745c5c3_Var1 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<style>\n      body {\n        min-height: 100dvh;\n        display: flex;\n        flex-direction: column;\n      }\n\n      main {\n        flex-grow: 1;\n      }\n\n      .container {\n        max-width: 800px;\n      }\n      \n      @media (min-width: 576px) {\n        .container { max-width: 540px; }\n      }\n      @media (min-width: 768px) {\n        .container { max-width: 720px; }\n      }\n      @media (min-width: 1024px) {\n        .container { max-width: 860px; }\n      }\n      @media (min-width: 1280px) {\n        .container { max-width: 940px; }\n      }\n    </style>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 1, "<style>\n      body {\n        min-height: 100dvh;\n        display: flex;\n        flex-direction: column;\n      }\n\n      main {\n        flex-grow: 1;\n      }\n\n      .container {\n        max-width: 800px;\n      }\n      \n      @media (min-width: 576px) {\n        .container { max-width: 540px; }\n      }\n      @media (min-width: 768px) {\n        .container { max-width: 720px; }\n      }\n      @media (min-width: 1024px) {\n        .container { max-width: 860px; }\n      }\n      @media (min-width: 1280px) {\n        .container { max-width: 940px; }\n      }\n\n      section, aside {\n        margin-bottom: 3rem;\n      }\n    </style>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -115,7 +115,7 @@ func header() templ.Component {
 			templ_7745c5c3_Var3 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 6, "<header></header><nav><ul><li><a href=\"/\">about</a></li><li><a href=\"/weeb\" onclick=\"return confirm('Do you really want to enter the weeb zone?')\">weeb only </a></li></ul></nav>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 6, "<header><nav><ul><li><a href=\"/\">about</a></li><li><a href=\"/blog\">blog</a></li><li><a href=\"/weeb\" onclick=\"return confirm('Do you really want to enter the weeb zone?')\">weeb only </a></li></ul></nav></header>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -151,7 +151,7 @@ func meta(title string) templ.Component {
 		var templ_7745c5c3_Var5 string
 		templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/layout/base_layout.templ`, Line: 80, Col: 16}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/layout/base_layout.templ`, Line: 86, Col: 16}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 		if templ_7745c5c3_Err != nil {

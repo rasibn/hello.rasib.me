@@ -1,0 +1,14 @@
+package blog
+
+import "github.com/rasibn/hello.rasib.me/views/layout"
+
+templ BlogWrapper(post BlogPost) {
+	@layout.Layout(post.Title) {
+		<article>
+			<h1>{ post.Title }</h1>
+			<p><em>Published: { post.Date }</em></p>
+			@post.Template()
+		</article>
+	}
+}
+

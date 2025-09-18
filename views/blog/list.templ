@@ -1,0 +1,34 @@
+package blog
+
+import "github.com/rasibn/hello.rasib.me/views/layout"
+
+templ BlogList(blogs []BlogPost) {
+	@layout.Layout("Blog") {
+		<section>
+			<h1>Thought drafts</h1>
+			<p>My thoughts on programming, technology, AI, productivity and whatever I feel like writing.</p>
+		</section>
+		<section>
+			for _, blog := range blogs {
+				if !blog.Draft {
+					<article>
+						<h2><a href={ templ.URL("/blog/" + blog.ID) }>{ blog.Title }</a></h2>
+						<p><em>{ blog.Date }</em></p>
+						if blog.Summary != "" {
+							<p>{ blog.Summary }</p>
+						}
+					</article>
+				}
+			}
+		</section>
+	}
+}
+
+type BlogPost struct {
+	ID       string
+	Title    string
+	Date     string
+	Summary  string
+	Draft    bool
+	Template func() templ.Component
+}

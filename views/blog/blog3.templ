@@ -1,0 +1,41 @@
+package blog
+
+templ Blog3Content() {
+	<section>
+		<h2>The Problem</h2>
+		<p>
+			I love reading, but existing epub readers frustrated me. Syncing books between
+			devices was a pain, the interfaces were cluttered, and none of them worked
+			exactly how I wanted.
+		</p>
+	</section>
+
+	<section>
+		<h2>The Solution: Hatsulingo</h2>
+		<p>
+			So I built <a href="https://www.hatsulingo.com">hatsulingo.com</a> - a web-based
+			reading app that focuses on simplicity and sync.
+		</p>
+		<p>Key features I wanted:</p>
+		<ul>
+			<li>Works on any device with a browser</li>
+			<li>Automatic sync across devices</li>
+			<li>Clean, distraction-free reading interface</li>
+			<li>Good typography and reading experience</li>
+		</ul>
+	</section>
+
+	<section>
+		<h2>Technical Details</h2>
+		<p>
+			Built with Go on the backend, minimal JavaScript on the frontend. The epub
+			parsing was the trickiest part - those files are basically zip archives
+			with XML content and specific structure requirements.
+		</p>
+		<p>
+			Still working on some features, but it's already become my daily reading app.
+			Sometimes the best motivation for building something is that you'll be the
+			primary user.
+		</p>
+	</section>
+}

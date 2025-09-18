@@ -5,33 +5,34 @@ import "github.com/rasibn/hello.rasib.me/views/layout"
 templ Hello() {
 	@layout.Layout("hello world") {
 		@aboutSection()
-		<article id="life">
-			@techSection()
-		</article>
-		<article>
-			My favourite tech article is probably <a href="https://htmx.org/essays/locality-of-behaviour/">htmx.org/essays/locality-of-behaviour/</a>
-			by <a href="https://grugbrain.dev/">the greatest smol brain dev</a>.
-			<hr/>
-			<p>Really made me the engineer I am today!</p>
-		</article>
-		<article id="books">
+		<section id="books">
 			@booksSection()
-		</article>
+		</section>
+		<section id="tech">
+			@techSection()
+		</section>
+		<aside>
+			<h3>Tech Article I often think about</h3>
+			<p>
+				My favourite tech article is probably <a href="https://htmx.org/essays/locality-of-behaviour/">htmx.org/essays/locality-of-behaviour/</a>
+				by <a href="https://grugbrain.dev/">the greatest smol brain dev</a>.
+			</p>
+			<p>Really made me the engineer I am today!</p>
+		</aside>
 	}
 }
 
 templ aboutSection() {
-	<article id="about">
-		<header>
-			<h1>Software Engineer; Born 2002</h1>
-		</header>
+	<section id="about">
+		<h1>Software Engineer; Born 2002</h1>
 		<p>
 			I like thinking, coding, maths, reading, walking and chocolates.
 		</p>
-	</article>
+	</section>
 }
 
 templ techSection() {
+	<h2>Tech stuffs</h2>
 	<p>Some cool tech I use dailysh are:</p>
 	<ul>
 		<li>
@@ -85,6 +86,7 @@ templ techSection() {
 }
 
 templ booksSection() {
+	<h2>Favorite Books</h2>
 	<p>I also like words on paper. Some of my favorite books are:</p>
 	<ul>
 		<li>Name of the Wind</li>
