@@ -43,7 +43,7 @@ func weeb(w http.ResponseWriter, r *http.Request) {
 }
 
 func blogList(w http.ResponseWriter, r *http.Request) {
-	template := blog.BlogList(Posts)
+	template := blog.BlogList(blog.Posts)
 	_ = template.Render(context.Background(), w)
 }
 
@@ -51,7 +51,7 @@ func blogPost(w http.ResponseWriter, r *http.Request) {
 	path := strings.TrimPrefix(r.URL.Path, "/blog/")
 	id := strings.TrimSuffix(path, "/")
 
-	for _, post := range Posts {
+	for _, post := range blog.Posts {
 		if post.ID == id {
 			template := blog.BlogWrapper(post)
 			_ = template.Render(context.Background(), w)
