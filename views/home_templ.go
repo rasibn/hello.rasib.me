@@ -127,7 +127,7 @@ func techSection() templ.Component {
 			templ_7745c5c3_Var4 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "<p>Some cool tech I use dailysh are:</p><ul><li><code>nvim</code> as my editor for everything</li><li><code>oil.nvim</code> as my file manager</li><li><code>NixOS</code> as my operating system, because I LOVE not having to setup a new computer ever again</li><li><a href=\"https://www.hatsulingo.com\">hatsulingo.com</a> as my reading app<ul><li>made this because epub reader sucked and syncing books was annoying</li></ul></li><hr><li>And yes, my scripting language of choice is golang:<ul>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "<p>Some cool tech I use dailysh are:</p><ul><li><code>nvim</code> as my editor for everything</li><li><code>oil.nvim</code> as my file manager</li><li><code>NixOS</code> as my operating system, because I LOVE not having to setup a new computer ever again</li><li><code>zen</code> as my browser; with extensions: <code>bitwarden</code>, <code>vimium</code></li><li><a href=\"https://www.hatsulingo.com\">hatsulingo.com</a> as my reading app<ul><li>made this because epub reader sucked and syncing books was annoying</li></ul></li><hr><li>And yes, my scripting language of choice is golang:<ul>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -145,7 +145,7 @@ func techSection() templ.Component {
 			var templ_7745c5c3_Var5 templ.SafeURL
 			templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinURLErrs(val.url)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/home.templ`, Line: 66, Col: 21}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/home.templ`, Line: 69, Col: 21}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 			if templ_7745c5c3_Err != nil {
@@ -158,7 +158,7 @@ func techSection() templ.Component {
 			var templ_7745c5c3_Var6 string
 			templ_7745c5c3_Var6, templ_7745c5c3_Err = templ.JoinStringErrs(val.name)
 			if templ_7745c5c3_Err != nil {
-				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/home.templ`, Line: 70, Col: 17}
+				return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/home.templ`, Line: 73, Col: 17}
 			}
 			_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var6))
 			if templ_7745c5c3_Err != nil {
