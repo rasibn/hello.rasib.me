@@ -1,0 +1,91 @@
+package views
+
+import "github.com/rasibn/hello.rasib.me/views/layout"
+
+templ Hello() {
+	@layout.Layout("hello world") {
+		@aboutSection()
+		<article id="life">
+			@techSection()
+		</article>
+		<article>
+			My favourite tech article is probably <a href="https://htmx.org/essays/locality-of-behaviour/">https://htmx.org/essays/locality-of-behaviour/</a>
+		</article>
+		<article id="books">
+			@booksSection()
+		</article>
+	}
+}
+
+templ aboutSection() {
+	<article id="about">
+		<header>
+			<h1>Software Engineer; Born 2002</h1>
+		</header>
+		<p>
+			I like thinking, coding, maths, reading, walking and chocolates.
+		</p>
+	</article>
+}
+
+templ techSection() {
+	<p>Some cool tech I use dailysh are:</p>
+	<ul>
+		<li>
+			<code>nvim</code> as my editor for everything
+		</li>
+		<li>
+			<code>oil.nvim</code> as my file manager
+		</li>
+		<li><code>NixOS</code> as my operating system, because I LOVE not having to setup a new computer ever again</li>
+		<li>
+			<a href="https://www.hatsulingo.com">hatsulingo.com</a> as my
+			reading app
+			<ul>
+				<li>
+					made this because epub reader sucked and syncing books was annoying
+				</li>
+			</ul>
+		</li>
+		<hr/>
+		<li>
+			And yes, my scripting language of choice is golang:
+			<ul>
+				for _, val := range []struct{
+            name string
+            url string
+            }{
+            {name: "vimi - a tool for fuzzy finding files in my ~/ dir", url: "https://github.com/rasibn/dotfiles/blob/main/shared/scripts/golang/vimi"},
+            {name: "proji- a tool for fuzzy finding folder in my ~/ dir", url: "https://github.com/rasibn/dotfiles/blob/main/shared/scripts/golang/proji"},
+            } {
+					<li>
+						<a
+							href={ val.url }
+							target="_blank"
+							rel="noopener"
+						>
+							{ val.name }
+						</a>
+					</li>
+				}
+			</ul>
+		</li>
+	</ul>
+	<hr/>
+	<p>
+		You can stalk more stuff at github: 
+		<a href="https://github.com/rasibn/dotfiles" target="_blank" rel="noopener">https://github.com/rasibn/dotfiles</a>.
+	</p>
+}
+
+templ booksSection() {
+	<p>Some of my favorite books are:</p>
+	<ul>
+		<li>Name of the Wind</li>
+		<li>Red Sister</li>
+		<li>Stormlight: Words of Radiance</li>
+		<li>Mistborn: Hero of Ages, Final Empire</li>
+		<li>Akuyaku Reijo Ni Koi Wo Shite (Japanese)</li>
+		<!-- <li>Moshoku Tensei</li> -->
+	</ul>
+}
