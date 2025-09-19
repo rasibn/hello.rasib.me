@@ -69,7 +69,7 @@ func Hello() templ.Component {
 			}
 			return nil
 		})
-		templ_7745c5c3_Err = layout.Layout("hello world").Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
+		templ_7745c5c3_Err = layout.Layout("hello traveller").Render(templ.WithChildren(ctx, templ_7745c5c3_Var2), templ_7745c5c3_Buffer)
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -127,7 +127,7 @@ func techSection() templ.Component {
 			templ_7745c5c3_Var4 = templ.NopComponent
 		}
 		ctx = templ.ClearChildren(ctx)
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "<h2>Tech stuffs</h2><p>Some cool tech I use dailysh are:</p><ul><li><code>nvim</code> as my editor for everything</li><li><code>oil.nvim</code> as my file manager</li><li><code>NixOS</code> as my operating system, because I LOVE not having to setup a new computer ever again</li><li><code>zen</code> as my browser; with extensions: <code>bitwarden</code>, <code>vimium</code></li><li><a href=\"https://www.hatsulingo.com\">hatsulingo.com</a> as my reading app<ul><li>made this because epub reader sucked and syncing books was annoying</li></ul></li><hr><li>And yes, my scripting language of choice is golang:<ul>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "<h2>Tech stuffs</h2><p>Some cool tech I use dailysh are:</p><ul><li><code>nvim</code> as my editor for everything</li><li><code>oil.nvim</code> as my file manager</li><li><code>NixOS</code> as my operating system, because I LOVE not having to setup a new computer ever again</li><li><code>zen</code> as my browser; with extensions: <code>bitwarden</code>, <code>vimium</code></li><li><a href=\"https://www.hatsulingo.com\">hatsulingo.com</a> as my reading app<ul><li>I made this because epub reader sucked and syncing books was annoying</li></ul></li><hr><li>And yes, my scripting language of choice is golang:<ul>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}

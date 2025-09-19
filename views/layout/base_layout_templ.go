@@ -86,7 +86,7 @@ func Layout(name string) templ.Component {
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
-		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "</main><footer><a href=\"https://www.github.com/rasibn/hello.rasib.me\">Source</a></footer></body></html>")
+		templ_7745c5c3_Err = templruntime.WriteString(templ_7745c5c3_Buffer, 5, "</main><footer><a href=\"https://www.github.com/rasibn/hello.rasib.me\">Source (free)</a> &nbsp;&nbsp; <a href=\"https://x.com/messages/compose?recipient_id=1505224710589718533&text=I%20love%20cats.\">Contact (free)</a></footer></body></html>")
 		if templ_7745c5c3_Err != nil {
 			return templ_7745c5c3_Err
 		}
@@ -151,7 +151,7 @@ func meta(title string) templ.Component {
 		var templ_7745c5c3_Var5 string
 		templ_7745c5c3_Var5, templ_7745c5c3_Err = templ.JoinStringErrs(title)
 		if templ_7745c5c3_Err != nil {
-			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/layout/base_layout.templ`, Line: 86, Col: 16}
+			return templ.Error{Err: templ_7745c5c3_Err, FileName: `views/layout/base_layout.templ`, Line: 88, Col: 16}
 		}
 		_, templ_7745c5c3_Err = templ_7745c5c3_Buffer.WriteString(templ.EscapeString(templ_7745c5c3_Var5))
 		if templ_7745c5c3_Err != nil {
